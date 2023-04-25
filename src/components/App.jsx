@@ -7,6 +7,16 @@ import { Title } from './Title/Title';
 import { ContactsForm } from './ContactsForm/ContactsForm';
 import { nanoid } from 'nanoid';
 import { Layout } from './Layout/Layout.styled';
+// import { useDispatch, useSelector } from 'react-redux';
+// import { deleteContacts } from 'redux/contactSlice';
+// import { getFilters } from 'redux/selectors';
+
+//  export const StatusFilter = () => {
+//    const dispatch = useDispatch();
+//    const filtered = useSelector(getFilters);
+
+//    const changeFilter = filtered => dispatch(setStatusFilter(filtered));
+//  };
 
 export function App() {
   const items = [
@@ -38,6 +48,8 @@ export function App() {
   const deleteContact = id => {
     setContacts(contacts.filter(contact => contact.id !== id));
   };
+
+  // const deleteContact = () => dispatch(deleteContacts(contacts.id));
 
   const changeFilter = e => {
     setFilter(e.currentTarget.value);
