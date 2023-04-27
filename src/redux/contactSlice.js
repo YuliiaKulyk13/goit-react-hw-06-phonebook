@@ -33,7 +33,7 @@ export const contactSlice = createSlice({
       });
     },
     filterContacts(state, action) {
-      state.filters = action.payload;
+      state.filter = action.payload;
     },
   },
 });
