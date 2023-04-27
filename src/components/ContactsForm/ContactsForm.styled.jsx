@@ -44,6 +44,5 @@ export const Label = styled.label`
   font-size: 20px;
   text-align: center;
   display: block;
-  font-style: italic;
-  color: #0d497e;
+  color: #222425;
 `;

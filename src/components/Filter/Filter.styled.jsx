@@ -20,6 +20,5 @@ export const Label = styled.label`
   text-align: center;
   display: block;
   margin: 0 auto;
-  color: #0a4579;
-  font-style: italic;
+  color: #494a4c;
 `;

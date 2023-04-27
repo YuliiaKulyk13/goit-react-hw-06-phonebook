@@ -11,23 +11,22 @@ import { getContacts, getFilters } from 'redux/selectors';
 
 const PhoneContacts = () => {
   const dispatch = useDispatch();
-  const contactList = useSelector(getContacts);
-  const filteredContacts = useSelector(getFilters);
 
-  const NewFilteredContactsList = contactList.filter(contact =>
-    contact.name.toLowerCase().includes(filteredContacts.toLowerCase())
+  const contacts = useSelector(getContacts);
+  const filter = useSelector(getFilters);
+
+  const NewFilteredContactsList = contacts.filter(contact =>
+    contact.name.toLowerCase().includes(filter.toLowerCase())
   );
-  console.log(contactList);
-  const NewContacts = NewFilteredContactsList();
 
   return (
     <List>
-      {NewContacts.map(({ id, name, number }) => (
+      {NewFilteredContactsList.map(({ id, name, number }) => (
         <Contact key={id}>
           <ContactItem>
             {name}: {number}
           </ContactItem>
-          <DeleteButton onClick={() => dispatch(deleteContacts(id))}>
+          <DeleteButton onClick={() => dispatch(deleteContacts({ id }))}>
             Delete
           </DeleteButton>
         </Contact>

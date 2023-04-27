@@ -5,5 +5,4 @@ export const TitleItem = styled.h2`
   margin-bottom: 15px;
   padding: 10px;
   text-align: center;
-  background-color: aliceblue;
 `;

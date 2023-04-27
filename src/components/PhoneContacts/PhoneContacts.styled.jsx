@@ -6,8 +6,7 @@ export const List = styled.ul`
 `;
 
 export const ContactItem = styled.p`
-  font-style: italic;
-  color: #0a81e9;
+  color: #3a3c3d;
 `;
 export const Contact = styled.li`
   display: flex;
